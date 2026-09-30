@@ -1,0 +1,52 @@
+# =========================
+# Java / Spring Boot
+# =========================
+
+ems-backend/target/
+ems-backend/.classpath
+ems-backend/.project
+ems-backend/.settings/
+ems-backend/.springBeans
+ems-backend/sts4-cache/
+
+# Logs
+*.log
+
+# Local / secret configuration
+ems-backend/src/main/resources/application-local.properties
+ems-backend/src/main/resources/application-secret.properties
+
+# Environment files
+.env
+.env.*
+*.env
+
+
+# =========================
+# React / Vite
+# =========================
+
+ems-frontend/node_modules/
+ems-frontend/dist/
+
+# Environment files
+ems-frontend/.env
+ems-frontend/.env.*
+!ems-frontend/.env.example
+
+
+# =========================
+# IDE
+# =========================
+
+.metadata/
+.vscode/
+.idea/
+
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
