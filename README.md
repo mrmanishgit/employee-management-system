@@ -50,7 +50,7 @@ mvn spring-boot:run
 
 Backend:
 
-http://localhost:8080
+http://localhost:8082
 Frontend
 
 Run:
@@ -69,8 +69,8 @@ Run backend tests:
 cd ems-backend
 mvn test
 Environment Variables
-
-Backend environment variables:
+```
+```Backend environment variables:
 
 DB_URL
 DB_USERNAME
@@ -78,7 +78,7 @@ DB_PASSWORD
 JWT_SECRET
 ADMIN_EMAIL
 ADMIN_PASSWORD
-
+```
 Frontend:
-
 VITE_API_URL
+<img width="1672" height="941" alt="dash" src="https://github.com/user-attachments/assets/86e8c8de-0976-415a-beeb-31176a2967d9" />
