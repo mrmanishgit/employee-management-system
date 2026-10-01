@@ -22,6 +22,8 @@ ems-backend/src/main/resources/application-secret.properties
 *.env
 !.env.example
 
+# Database backup
+ems_db_backup.sql
 
 # =========================
 # React / Vite
