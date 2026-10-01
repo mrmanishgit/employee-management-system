@@ -290,4 +290,21 @@ employee-management-system/
 ├── .env.example
 └── README.md
 ```
+Current project status
+```
+Step 1   Backend CRUD                    ✅
+Step 2   JWT Authentication              ✅
+Step 3   React Frontend                  ✅
+Step 4   Validation/Exceptions           ✅
+Step 5   Role + 401/403/400              ✅
+Step 6   Pagination/Search               ✅
+Step 7   Swagger                         ⏭️ Skipped
+Step 8   JUnit + Mockito                 ✅ 22/22
+Step 9   GitHub                          ✅
+Step 10  Docker                          ✅
+Step 11  Docker Compose                  🔄 NOW
+Step 12  Jenkins CI/CD                   ⏳
+Step 13  Deployment                      ⏳
+```
+
 <img width="1672" height="941" alt="dash" src="https://github.com/user-attachments/assets/86e8c8de-0976-415a-beeb-31176a2967d9" />
