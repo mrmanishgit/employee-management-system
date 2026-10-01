@@ -280,8 +280,9 @@ docker compose up -d --build
 
 
 Stop Application
-```
+
 docker compose down
+```
 Project Structure
 employee-management-system/
 ├── ems-backend/
