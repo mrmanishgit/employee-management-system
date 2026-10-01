@@ -20,6 +20,7 @@ ems-backend/src/main/resources/application-secret.properties
 .env
 .env.*
 *.env
+!.env.example
 
 
 # =========================
