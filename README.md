@@ -261,4 +261,33 @@ Repository:
 
 https://github.com/mrmanishgit/employee-management-system
 ```
+## Run with Docker
+
+Open CMD in the project folder:
+
+```bash
+cd "C:\Users\ajitm\OneDrive\Desktop\COMPANY PROJECT"
+docker compose up -d
+docker compose ps
+```
+http://localhost:3000
+```
+If you changed Java/React/Docker files
+
+cd "C:\Users\ajitm\OneDrive\Desktop\COMPANY PROJECT"
+docker compose up -d --build
+```
+
+
+Stop Application
+```
+docker compose down
+Project Structure
+employee-management-system/
+├── ems-backend/
+├── ems-frontend/
+├── docker-compose.yml
+├── .env.example
+└── README.md
+```
 <img width="1672" height="941" alt="dash" src="https://github.com/user-attachments/assets/86e8c8de-0976-415a-beeb-31176a2967d9" />
