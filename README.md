@@ -291,6 +291,8 @@ employee-management-system/
 ├── .env.example
 └── README.md
 ```
+<img width="1366" height="768" alt="8bdf91fb-3e2d-437e-a865-dd691d127f70" src="https://github.com/user-attachments/assets/501f5853-1d63-4a66-abfb-262d36b03d5a" />
+
 Current project status
 ```
 Step 1   Backend CRUD                    ✅
