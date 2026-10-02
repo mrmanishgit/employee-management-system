@@ -10,10 +10,10 @@ pipeline {
             }
         }
 
-        stage('Backend Test') {
+        stage('Backend Build & Test') {
             steps {
                 dir('ems-backend') {
-                    bat 'mvn clean test'
+                    bat 'mvn clean package'
                 }
             }
         }
