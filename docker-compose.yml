@@ -10,9 +10,6 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
-    ports:
-      - "3307:3306"
-
     volumes:
       - mysql_data:/var/lib/mysql
 
@@ -71,3 +68,4 @@ services:
 volumes:
   mysql_data:
     name: companyproject_mysql_data
+    external: true
