@@ -1,44 +1,10 @@
 services:
-  mysql:
-    image: mysql:8.4
-
-    restart: unless-stopped
-
-    environment:
-      MYSQL_DATABASE: ems_db
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "mysqladmin",
-          "ping",
-          "-h",
-          "localhost",
-          "-u",
-          "root",
-          "-p${MYSQL_ROOT_PASSWORD}",
-        ]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-
   backend:
     build:
       context: ./ems-backend
       dockerfile: Dockerfile
 
     restart: unless-stopped
-
-    depends_on:
-      mysql:
-        condition: service_healthy
 
     environment:
       DB_URL: jdbc:mysql://mysql:3306/ems_db
@@ -51,6 +17,9 @@ services:
 
     ports:
       - "8082:8082"
+
+    networks:
+      - ems-network
 
   frontend:
     build:
@@ -65,7 +34,10 @@ services:
     ports:
       - "3000:80"
 
-volumes:
-  mysql_data:
-    name: companyproject_mysql_data
+    networks:
+      - ems-network
+
+networks:
+  ems-network:
     external: true
+    name: companyproject_default
