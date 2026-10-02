@@ -2,6 +2,15 @@ pipeline {
 
     agent any
 
+    environment {
+        MYSQL_ROOT_PASSWORD = credentials('ems-mysql-root-password')
+        MYSQL_USER          = credentials('ems-mysql-user')
+        MYSQL_PASSWORD      = credentials('ems-mysql-password')
+        JWT_SECRET          = credentials('ems-jwt-secret')
+        ADMIN_EMAIL         = credentials('ems-admin-email')
+        ADMIN_PASSWORD      = credentials('ems-admin-password')
+    }
+
     stages {
 
         stage('Checkout') {
@@ -40,7 +49,7 @@ pipeline {
             }
         }
 
-     stage('Deploy') {
+        stage('Deploy') {
             steps {
                 bat 'docker compose up -d'
             }
@@ -50,11 +59,11 @@ pipeline {
     post {
 
         success {
-            echo 'EMS CI pipeline completed successfully.'
+            echo 'EMS CI/CD pipeline completed successfully.'
         }
 
         failure {
-            echo 'EMS CI pipeline failed.'
+            echo 'EMS CI/CD pipeline failed.'
         }
 
         always {
